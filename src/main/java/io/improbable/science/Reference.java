@@ -1,3 +1,5 @@
+package io.improbable.science;
+
 import java.util.concurrent.ExecutorService;
 
 /**

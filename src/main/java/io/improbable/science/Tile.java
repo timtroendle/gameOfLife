@@ -1,3 +1,5 @@
+package io.improbable.science;
+
 import java.io.Serializable;
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;

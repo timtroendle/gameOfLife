@@ -1,3 +1,5 @@
+package io.improbable.science;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
