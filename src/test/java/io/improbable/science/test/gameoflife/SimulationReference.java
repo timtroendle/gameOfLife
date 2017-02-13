@@ -1,4 +1,7 @@
-package io.improbable.science;
+package io.improbable.science.test.gameoflife;
+
+import io.improbable.science.PoolPool;
+import io.improbable.science.Reference;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -1,10 +1,9 @@
-package io.improbable.science;
+package io.improbable.science.test.gameoflife;
 
-import java.util.HashMap;
-import java.util.Map;
+import io.improbable.science.PoolPool;
+import io.improbable.science.Reference;
+
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ForkJoinPool;
 
 /**
  * Created by daniel on 07/02/17.

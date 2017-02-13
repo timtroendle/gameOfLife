@@ -1,4 +1,4 @@
-package io.improbable.science;
+package io.improbable.science.test.gameoflife;
 
 import java.io.Serializable;
 import java.util.Random;

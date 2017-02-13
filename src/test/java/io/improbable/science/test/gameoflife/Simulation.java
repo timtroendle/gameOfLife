@@ -1,15 +1,16 @@
-package io.improbable.science;
+package io.improbable.science.test.gameoflife;
+
+import io.improbable.science.ISteppable;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 
 /**
  * Created by daniel on 08/02/17.
  */
 public class Simulation implements ISteppable {
     final int nTiles=6;
-    Tile [] tiles = new Tile[nTiles];
-    TileReference [] tilerefs = new TileReference[nTiles];
+    Tile[] tiles = new Tile[nTiles];
+    TileReference[] tilerefs = new TileReference[nTiles];
 
     public Simulation() {
         int i;
@@ -19,12 +20,6 @@ public class Simulation implements ISteppable {
         }
         Tile myTile = tiles[0];
         TileReference myRef = new TileReference(myTile);
-
-        myTile.step();
-        myRef.step().thenAccept((result) -> {
-            // do other stuff
-        });
-
 
         Tile.join(tiles);
     }

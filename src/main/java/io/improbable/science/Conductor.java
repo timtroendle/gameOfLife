@@ -1,23 +1,24 @@
 package io.improbable.science;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 import static java.lang.Thread.sleep;
 
-public class Main {
-    public static Simulation sim = new Simulation();
+public class Conductor implements Runnable {
 
-    public static void main(String[] args) {
+    private final ISteppable sim;
+
+    public Conductor(ISteppable sim) {
+        this.sim = sim;
+    }
+
+    public void run() {
         try {
             int i,p;
-            for(i=0; i<400; ++i) {
+            for(i=0; i<100; ++i) {
                 Reference.pool.mainExecutor().submit(() -> {
                     sim.step();
                 }).get();
-                sim.printState();
-                System.out.println("");
-                System.out.println("");
             }
             sleep(200);
             Reference.pool.shutdown();
